@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/new_package">New package</a>
+
+    {% for package in packages %}
+    <div class="package-info">
+        <h2>PACKAGE ID #{{ package.id }}</h2>
+        <p>Sender: {{ package.sender }}</p>
+        <p>Recipient: {{ package.recipient }}</p>
+        <p>Origin: {{ package.origin }}</p>
+        <p>Destination: {{ package.destination }}</p>
+        <p>Location: {{ package.location }}</p>
+    </div>
+    {% endfor %}
+</body>
+
+</html>
